@@ -1,6 +1,6 @@
 'use strict';
 const addUsers = require('../controller/users/addUser');
-const deposiAmount = require('../controller/accountDetails/depositAmount');
+const transferAmount = require('../controller/accountDetails/transferAmount');
 const retriveDetails = require('../controller/accountDetails/retrive_accountDetails');
 
 const handleGET = async(req, res) => {
@@ -29,21 +29,12 @@ const handlePOST = async(req, res, next) =>{
             req.jsonBody = JSON.parse(body);
         if(req.url === '/users/adduser') {
             addUsers.adduserDetails(req.jsonBody, res);
-            res.writeHead(200, {'Content-Type': 'application/json'});
-            res.end();
-        } else if (req.url === '/accountDetails/depositamount') {
-            deposiAmount.depositAmount(req.jsonBody, res);
-            res.writeHead(200, {'Content-Type': 'application/json'});
-            res.end();
+        } else if (req.url === '/accountDetails/transferAmount') {
+            transferAmount.transferAmount(req.jsonBody, res);
         } else if (req.url === '/accountDetails/retriveAccountDetails') {
             retriveDetails.retriveAccountDetails(req.jsonBody, res);
-            // res.writeHead(200, { 'Content-Type': 'application/json' });
-            // res.write(JSON.stringify({ now: res.Available_balance }));
-            // res.end();
         } else if (req.url === '/accountDetails/retriveTransHistory') {
             retriveDetails.retriveTransHistory(req.jsonBody, res);
-            // res.writeHead(200, {'Content-Type': 'application/json'});
-            // res.end();
         }
     });
     } catch(err){

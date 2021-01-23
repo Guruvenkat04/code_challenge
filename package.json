@@ -1,0 +1,26 @@
+{
+  "name": "code-challenge",
+  "version": "1.0.0",
+  "description": "Your assignment is to build an internal API for a fake financial institution using Node and no framework.\r Brief",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.13",
+    "query-string": "^6.13.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PayConstruct/code-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PayConstruct/code-challenge/issues"
+  },
+  "homepage": "https://github.com/PayConstruct/code-challenge#readme"
+}

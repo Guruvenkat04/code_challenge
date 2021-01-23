@@ -1,0 +1,41 @@
+POST http://localhost:3000/users/adduser
+Content-Type: 'application/json'
+
+{
+    "account_holder_name": "Branden Gibson",
+    "phone_number": "7856312389",
+    "email_id": "Branden@gmail.com",
+    "address": "141/30 F1, main road. Chennai",
+    "acount_type": "Saving",
+    "account_branch": "Chennai",
+    "city": "Chennai",
+    "state": "Tamilnadu",
+    "country": "India",
+    "pincode": 600088 
+}
+
+####
+POST http://localhost:3000/accountDetails/depositamount
+Content-Type: 'application/json'
+
+{
+  "account_no": "6754312341230008",
+  "transfer_amount": 100,
+  "transfered_by": "6754312341230007"
+}
+
+####
+POST http://localhost:3000/accountDetails/retriveAccountDetails
+Content-Type: 'application/json'
+
+{
+  "account_no": "6754312341230008"
+}
+
+####
+POST http://localhost:3000/accountDetails/retriveTransHistory
+Content-Type: 'application/json'
+
+{
+  "account_no": "6754312341230008"
+}
